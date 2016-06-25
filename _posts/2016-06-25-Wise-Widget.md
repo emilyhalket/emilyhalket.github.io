@@ -1,10 +1,10 @@
 ---
-layout: post
+layout: default
 title: Wise Widget
 ---
 
 
-#WiseWidget
+# WiseWidget
 
 
 ### Insight Data Science
