@@ -12,4 +12,4 @@ I recently moved to New York to pursue a career as a data scientist as I finish 
 
 ### Personal Life
 
-I love to experiment in the kitchen and am always looking for willing taste testers! I love data and enjoy finding ways to bring together my skills and interests through small side projects. As I learn new technical skills, I love to test them out on data related to baking or my favorite TV shows. 
+I love data and enjoy finding ways to bring together my skills and interests through small side projects. As I learn new technical skills, I enjoy testing them out on data related to baking or my favorite TV shows. I also love to experiment in the kitchen and am always looking for a new recipe to try.
