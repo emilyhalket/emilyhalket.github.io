@@ -4,8 +4,6 @@ title: Wise Widget
 ---
 
 
-# WiseWidget
-
 
 ### Insight Data Science
 As a fellow in the Insight Data Science program, I had the opportunity to create a project as a consultant for a local startup. This company provides tools, deployed as widgets on online news articles. The company strives to match the widgets to articles based on the content of news articles. Identifying content in text is a challenging process, and their existing method failed to confidently identify the article content about 25% of the time. In these cases a default widget is deployed, which is often entirely unrelated to the article content and therefore may not be relevant to the reader. This company asked me to help them improve the matching process between article content and widgets, and also to identify content areas that might represent opportunities for growth.
