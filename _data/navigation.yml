@@ -3,12 +3,12 @@ main:
 #  - title: "Quick-Start Guide"
 #    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
 
-  - title: "About Me"
+  - title: "about me"
     #url: https://mmistakes.github.io/minimal-mistakes/
     url: https://emilyhalket.github.io/about-me/
     
     
-  - title: "Posts"
+  - title: "posts"
     #url: https://mmistakes.github.io/minimal-mistakes/year-archive/
     url: https://emilyhalket.github.io/year-archive/
     
