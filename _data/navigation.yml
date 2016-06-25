@@ -5,7 +5,8 @@ main:
 
   - title: "About Me"
     #url: https://mmistakes.github.io/minimal-mistakes/
-    url: https://emillyhalket.github.io/about-me
+    url: https://emilyhalket.github.io/about-me
+    
     
   - title: "Sample Posts"
     #url: https://mmistakes.github.io/minimal-mistakes/year-archive/
