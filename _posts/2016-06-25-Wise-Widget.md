@@ -55,6 +55,8 @@ The second goal of the project was to identify content areas not currently repre
 
 I chose to apply __k-means clustering__ to the topic distributions of approximately 4,000 articles. Varying the number of clusters and examining the subsequent cluster distributions, I ultimately divided the articles into six clusters. In this approach, each cluster represented a content theme common to a subset of articles. I then investigated articles appearing in each cluster to give a qualitative label to each cluster. 
 
+![Visualization of KMeans Clustering]({{ emilyhalket.com }}/images/cluster_image_06262016.png)
+
 Results from the k-means clustering led me to make three suggestions to the company.
 
 * First, one large cluster represented content related to existing subject verticals, however the style of the articles was qualitatively different than those related articles that were able to be matched to the subject verticals. As opposed to being written in the style of a typical news article, these articles were in a Q&A format. This cluster represented an __area of improvement__ for the classification method. I suggested that the company chose a subset of these articles to label with the appropriate widget and vertical using the existing labeling schema and then retrain the classifier.
