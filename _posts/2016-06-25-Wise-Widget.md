@@ -30,8 +30,9 @@ To address the first goal of the project, I planned to employ supervised machine
 In order to improve on the company's current approach, it was important to carefully consider feature selection. The current matching process relies on counts of key words thought to be reflective of a content vertical. 
 
 There are two limitations to the current approach
-	* The mapping of key words to verticals is based on human assumption, and may not be entirely accurate or may neglect important information
-	* In the case of this company, all of the content verticals are related and so there is crossover between key words and content verticals
+* The mapping of key words to verticals is based on human assumption, and may not be entirely accurate or may neglect important information
+
+* In the case of this company, all of the content verticals are related and so there is crossover between key words and content verticals
 
 Keeping these limitations in mind, I chose to use a __topic modeling approach__, specifically __latent Dirichlet allocation__, to reduce the dimensionality of the text data while maximizing the informational quality of the features.
 
@@ -54,11 +55,11 @@ I chose to apply __k-means clustering__ to the topic distributions of approximat
 
 Results from the k-means clustering led me to make three suggestions to the company.
 
-	* First, one large cluster represented content related to existing subject verticals, however the style of the articles was qualitatively different than those related articles that were able to be matched to the subject verticals. As opposed to being written in the style of a typical news article, these articles were in a Q&A format. This cluster represented an area of improvement for the classification method. I suggested that the company chose a subset of these articles to label with the appropriate widget and vertical using the existing labeling schema and then retrain the classifier.
+* First, one large cluster represented content related to existing subject verticals, however the style of the articles was qualitatively different than those related articles that were able to be matched to the subject verticals. As opposed to being written in the style of a typical news article, these articles were in a Q&A format. This cluster represented an __area of improvement__ for the classification method. I suggested that the company chose a subset of these articles to label with the appropriate widget and vertical using the existing labeling schema and then retrain the classifier.
 
-	* Second, another large cluster represented a content area not well represented by the company’s existing set of widgets. There is currently one widget assigned to this vertical, but the size of the cluster suggests that there is potential for growth in this subject vertical. Additionally, the classification failed to confidently assign articles within this cluster to the appropriate cluster, thus suggesting another area for improvement. I again suggested that the company label a subset of these articles with the appropriate vertical and retrain the classifier. 
+* Second, another large cluster represented a content area not well represented by the company’s existing set of widgets. There is currently one widget assigned to this vertical, but the size of the cluster suggests that there is __potential for growth__ in this subject vertical. Additionally, the classification failed to confidently assign articles within this cluster to the appropriate cluster, thus suggesting another __area for improvement__. I again suggested that the company label a subset of these articles with the appropriate vertical and retrain the classifier. 
 
-	* Finally, there was one cluster that represented a content theme not addressed by the existing subject verticals. This cluster represented an area for growth and potential new market for the company. 
+* Finally, there was one cluster that represented a content theme not addressed by the existing subject verticals. This cluster represented an __area for growth and potential new market__ for the company. 
 
 
 
