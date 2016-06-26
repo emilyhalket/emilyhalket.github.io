@@ -38,7 +38,7 @@ Keeping these limitations in mind, I chose to use a __topic modeling approach__,
 
 [Topic modeling](https://www.cs.princeton.edu/~blei/papers/Blei2012.pdf "Topic Modeling Reference") is an algorithmic approach to identifying themes (topics) in a corpus of texts, which results in representing documents within the corpus as distributions of topics. Importantly, this approach does not assume that a given document contains only one content theme. In the case of news articles, any one article may touch on a number of topics (economics, politics, foreign affairs), but still may be qualitatively different from an article that contains overlapping topics. Thus, this approach lends itself well to the problem that I am trying to address. 
 
-![Conceptual illustration of LDA]({{ emilyhalket.com }}/images/lda_illustrations.png)
+![Conceptual illustration of LDA]({{ emilyhalket.com }}/images/lda_illustration.png)
 
 One challenge of this approach is that the number of topics is assumed to be a known parameter, and so the user must specify the number of topics to be used in the algorithm. There are a number of proposed techniques to address the choice of number of topics. For this project, I chose to vary the number of topics and investigate subsequent topic vocabularies and optimize classifier performance. 
 
