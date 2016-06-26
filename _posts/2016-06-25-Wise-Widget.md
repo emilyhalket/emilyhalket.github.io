@@ -38,6 +38,9 @@ Keeping these limitations in mind, I chose to use a __topic modeling approach__,
 
 [Topic modeling](https://www.cs.princeton.edu/~blei/papers/Blei2012.pdf "Topic Modeling Reference") is an algorithmic approach to identifying themes (topics) in a corpus of texts, which results in representing documents within the corpus as distributions of topics. Importantly, this approach does not assume that a given document contains only one content theme. In the case of news articles, any one article may touch on a number of topics (economics, politics, foreign affairs), but still may be qualitatively different from an article that contains overlapping topics. Thus, this approach lends itself well to the problem that I am trying to address. 
 
+
+###### Conceptual Illustration of Topic Modeling using Latent Dirichlet Allocation
+
 ![Conceptual illustration of LDA]({{ emilyhalket.com }}/images/lda_illustration.png)
 
 One challenge of this approach is that the number of topics is assumed to be a known parameter, and so the user must specify the number of topics to be used in the algorithm. There are a number of proposed techniques to address the choice of number of topics. For this project, I chose to vary the number of topics and investigate subsequent topic vocabularies and optimize classifier performance. 
@@ -55,15 +58,17 @@ The second goal of the project was to identify content areas not currently repre
 
 I chose to apply __k-means clustering__ to the topic distributions of approximately 4,000 articles. Varying the number of clusters and examining the subsequent cluster distributions, I ultimately divided the articles into six clusters. In this approach, each cluster represented a content theme common to a subset of articles. I then investigated articles appearing in each cluster to give a qualitative label to each cluster. 
 
+
+##### Visualization of K-Means Clustering Output
 ![Visualization of KMeans Clustering]({{ emilyhalket.com }}/images/cluster_image_06262016.png)
 
 Results from the k-means clustering led me to make three suggestions to the company.
 
-* First, one large cluster represented content related to existing subject verticals, however the style of the articles was qualitatively different than those related articles that were able to be matched to the subject verticals. As opposed to being written in the style of a typical news article, these articles were in a Q&A format. This cluster represented an __area of improvement__ for the classification method. I suggested that the company chose a subset of these articles to label with the appropriate widget and vertical using the existing labeling schema and then retrain the classifier.
+* First, two somewhat overlapping clusters (purple and dark blue) represented content related to existing subject verticals, however the style of these articles was qualitatively different than those related articles that were able to be matched to the subject verticals. As opposed to being written in the style of a typical news article, these articles were in a Q&A format. These clusters represented an __area of improvement__ for the classification method. I suggested that the company chose a subset of these articles to label with the appropriate widget and vertical using the existing labeling schema and then retrain the classifier.
 
-* Second, another large cluster represented a content area not well represented by the company’s existing set of widgets. There is currently one widget assigned to this vertical, but the size of the cluster suggests that there is __potential for growth__ in this subject vertical. Additionally, the classification failed to confidently assign articles within this cluster to the appropriate cluster, thus suggesting another __area for improvement__. I again suggested that the company label a subset of these articles with the appropriate vertical and retrain the classifier. 
+* Second, the large cluster (light blue) represented a content area not well represented by the company’s existing set of widgets. There is currently one widget assigned to this vertical, but the size of the cluster suggests that there is __potential for growth__ in this subject vertical. Additionally, the classification failed to confidently assign articles within this cluster to the appropriate cluster, thus suggesting another __area for improvement__. I again suggested that the company label a subset of these articles with the appropriate vertical and retrain the classifier. 
 
-* Finally, there was one cluster that represented a content theme not addressed by the existing subject verticals. This cluster represented an __area for growth and potential new market__ for the company. 
+* Finally, there was one cluster (pink) that represented a content theme not addressed by the existing subject verticals. This cluster represented an __area for growth and potential new market__ for the company. 
 
 
 
