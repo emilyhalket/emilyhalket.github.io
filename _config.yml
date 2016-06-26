@@ -7,9 +7,9 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "code&cookies"
+title                    : "emily halket"
 title_separator          : "-"
-name                     : "Emily"
+name                     : ""
 description              : ""
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -63,7 +63,7 @@ google_ad_slot           :
 
 # Site Author
 author:
-  name             : "Emily"
+  name             : ""
   avatar           : "photo.png"
   bio              : "People scientist, coffee lover, and enthusiastic baker."
   location         : "Brookyln, NY"
