@@ -38,6 +38,8 @@ Keeping these limitations in mind, I chose to use a __topic modeling approach__,
 
 [Topic modeling](https://www.cs.princeton.edu/~blei/papers/Blei2012.pdf "Topic Modeling Reference") is an algorithmic approach to identifying themes (topics) in a corpus of texts, which results in representing documents within the corpus as distributions of topics. Importantly, this approach does not assume that a given document contains only one content theme. In the case of news articles, any one article may touch on a number of topics (economics, politics, foreign affairs), but still may be qualitatively different from an article that contains overlapping topics. Thus, this approach lends itself well to the problem that I am trying to address. 
 
+![Conceptual illustration of LDA]({{ emilyhalket.com }}/images/lda_illustration.png)
+
 One challenge of this approach is that the number of topics is assumed to be a known parameter, and so the user must specify the number of topics to be used in the algorithm. There are a number of proposed techniques to address the choice of number of topics. For this project, I chose to vary the number of topics and investigate subsequent topic vocabularies and optimize classifier performance. 
 
 I used the topic distributions for each article as features for the classification algorithm. I chose to train and test the classifier on those articles that had been matched to widgets using the company’s existing approach. By using these existing labels, I was able to make the classification problem a supervised learning problem. A limitation to this choice, however, is that it assumes that there is truth to the existing labeling schema. This is a potential area of improvement for future iterations of this project.
@@ -52,6 +54,8 @@ I then applied the trained and validated classifier to those articles that were 
 The second goal of the project was to identify content areas not currently represented in the company’s existing subject verticals, and thus areas for potential growth. Because of the unknown nature of the uncovered content, this goal posed an unsupervised learning problem. Given the limited timeline of the project, I chose to focus my efforts on the unmatched articles that had the lowest probability of classification. Investigating the content of the articles with the lowest probability of classification allowed me to focus on those articles with the lowest certainty of fitting within the existing content verticals and thus with the highest likelihood of representing new subject verticals. 
 
 I chose to apply __k-means clustering__ to the topic distributions of approximately 4,000 articles. Varying the number of clusters and examining the subsequent cluster distributions, I ultimately divided the articles into six clusters. In this approach, each cluster represented a content theme common to a subset of articles. I then investigated articles appearing in each cluster to give a qualitative label to each cluster. 
+
+![Visualization of KMeans Clustering]({{ emilyhalket.com }}/images/cluster_image_06262016.png)
 
 Results from the k-means clustering led me to make three suggestions to the company.
 
