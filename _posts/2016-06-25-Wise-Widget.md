@@ -1,5 +1,6 @@
 ---
 layout: archive
+author_profile: True
 title: Wise Widget
 ---
 
