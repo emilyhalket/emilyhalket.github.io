@@ -8,9 +8,9 @@ main:
     url: https://emilyhalket.github.io/about-me/
     
     
-  - title: "posts"
+#  - title: "posts"
     #url: https://mmistakes.github.io/minimal-mistakes/year-archive/
-    url: https://emilyhalket.github.io/year-archive/
+#    url: https://emilyhalket.github.io/year-archive/
     
 #  - title: "Sample Pages"
 #    url: https://mmistakes.github.io/minimal-mistakes/page-archive/
