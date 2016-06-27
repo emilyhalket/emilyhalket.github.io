@@ -50,6 +50,8 @@ One challenge of this approach is that the number of topics is assumed to be a k
 
 To prepare the article text for topic modeling, I first needed to preprocess the raw text. Using python, I was able to create a preprocessing function to parse the words and remove punctuation and stop words.  I then used [nltk’s WordNetLemmatizer](http://www.nltk.org/api/nltk.stem.html “nltk documentation”) function to return the [lemma](https://en.wikipedia.org/wiki/Lemmatisation “lemmatization reference”) of each word. After preprocessing the text, I used [scikit-learn’s CountVectorizer](http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html, “CountVectorizer”) function to convert the lemmatized words within each document into features for the LDA model. I then used [scikit-learn’s latent Dirichlet allocation](http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.LatentDirichletAllocation.html “sklearn LDA”) function to fit a topic model to my corpus of processed article text.
 
+#### Classification Algorithm
+
 I used the topic distributions for each article as features for the classification algorithm. I chose to train and test the classifier on those articles that had been matched to widgets using the company’s existing approach. By using these existing labels, I was able to make the classification problem a supervised learning problem. A limitation to this choice, however, is that it assumes that there is truth to the existing labeling schema. This is a potential area of improvement for future iterations of this project.
 
 I divided the 45,000 matched articles into training (36,000) and testing (9,000) sets for cross-validation and tested three machine learning classifiers: [naïve bayes]( http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html “naïve bayes”), [logistic regression]( http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html “logistic regression”), and [random forest]( http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html “random forest”). 
@@ -62,6 +64,8 @@ I then applied the trained and validated classifier to those articles that were 
 ### Goal 2:
 
 The second goal of the project was to identify content areas not currently represented in the company’s existing subject verticals, and thus areas for potential growth. Because of the unknown nature of the uncovered content, this goal posed an unsupervised learning problem. Given the limited timeline of the project, I chose to focus my efforts on the unmatched articles that had the lowest probability of classification. Investigating the content of the articles with the lowest probability of classification allowed me to focus on those articles with the lowest certainty of fitting within the existing content verticals and thus with the highest likelihood of representing new subject verticals. 
+
+#### Clustering Unmatched Content
 
 I chose to apply __k-means clustering__ to the topic distributions of approximately 4,000 articles. Varying the number of clusters and examining the subsequent cluster distributions, I ultimately divided the articles into six clusters. In this approach, each cluster represented a content theme common to a subset of articles. I then investigated articles appearing in each cluster to give a qualitative label to each cluster. 
 
